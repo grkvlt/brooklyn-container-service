@@ -33,7 +33,6 @@ import static org.apache.brooklyn.core.entity.EntityAsserts.assertEntityHealthy;
 import static org.apache.brooklyn.test.Asserts.succeedsEventually;
 import static org.apache.brooklyn.util.http.HttpAsserts.assertHttpStatusCodeEventuallyEquals;
 import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertNotNull;
 import static org.testng.Assert.assertTrue;
 
 import java.util.List;
