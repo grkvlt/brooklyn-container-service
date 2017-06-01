@@ -130,8 +130,7 @@ public interface KubernetesLocationConfig extends CloudLocationConfig {
             .build();
 
     @SuppressWarnings("serial")
-    ConfigKey<Map<String, ?>> ENV = ConfigKeys.builder(new TypeToken<Map<String, ?>>() {
-    })
+    ConfigKey<Map<String, ?>> ENV = ConfigKeys.builder(new TypeToken<Map<String, ?>>() { })
             .name("env")
             .description("Environment variables to inject when starting the container")
             .defaultValue(ImmutableMap.<String, Object>of())

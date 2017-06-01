@@ -56,13 +56,10 @@ public class KubernetesClientRegistryImpl implements KubernetesClientRegistry {
         if (url.getProtocol().equals("https")) {
             KubernetesCerts certs = new KubernetesCerts(conf);
             if (certs.caCertData.isPresent()) configBuilder.withCaCertData(toBase64Encoding(certs.caCertData.get()));
-            if (certs.clientCertData.isPresent())
-                configBuilder.withClientCertData(toBase64Encoding(certs.clientCertData.get()));
-            if (certs.clientKeyData.isPresent())
-                configBuilder.withClientKeyData(toBase64Encoding(certs.clientKeyData.get()));
+            if (certs.clientCertData.isPresent()) configBuilder.withClientCertData(toBase64Encoding(certs.clientCertData.get()));
+            if (certs.clientKeyData.isPresent()) configBuilder.withClientKeyData(toBase64Encoding(certs.clientKeyData.get()));
             if (certs.clientKeyAlgo.isPresent()) configBuilder.withClientKeyAlgo(certs.clientKeyAlgo.get());
-            if (certs.clientKeyPassphrase.isPresent())
-                configBuilder.withClientKeyPassphrase(certs.clientKeyPassphrase.get());
+            if (certs.clientKeyPassphrase.isPresent()) configBuilder.withClientKeyPassphrase(certs.clientKeyPassphrase.get());
             // TODO Should we also set configBuilder.withTrustCerts(true) here?
         }
 
