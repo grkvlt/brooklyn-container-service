@@ -18,19 +18,21 @@
  */
 package org.apache.brooklyn.container.location.kubernetes;
 
-import com.google.common.base.Throwables;
-import com.google.common.io.BaseEncoding;
-import io.fabric8.kubernetes.client.ConfigBuilder;
-import io.fabric8.kubernetes.client.DefaultKubernetesClient;
-import io.fabric8.kubernetes.client.KubernetesClient;
-import org.apache.brooklyn.util.core.config.ConfigBag;
-import org.apache.brooklyn.util.text.Strings;
-import org.apache.brooklyn.util.time.Duration;
+import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import static com.google.common.base.Preconditions.checkNotNull;
+import org.apache.brooklyn.util.core.config.ConfigBag;
+import org.apache.brooklyn.util.text.Strings;
+import org.apache.brooklyn.util.time.Duration;
+
+import com.google.common.base.Throwables;
+import com.google.common.io.BaseEncoding;
+
+import io.fabric8.kubernetes.client.ConfigBuilder;
+import io.fabric8.kubernetes.client.DefaultKubernetesClient;
+import io.fabric8.kubernetes.client.KubernetesClient;
 
 public class KubernetesClientRegistryImpl implements KubernetesClientRegistry {
 
